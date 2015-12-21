@@ -1,0 +1,4 @@
+#! /bin/sh
+IMAGE=dataportenschemas
+docker build -t $IMAGE .
+docker run -v $(pwd)/migrations:/migrations --env CASSANDRA_NODE --env CASSANDRA_KEYSPACE $IMAGE $@
