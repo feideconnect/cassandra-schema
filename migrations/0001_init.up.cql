@@ -79,6 +79,7 @@ CREATE TABLE groups (
 
 	name text,
 	descr text,
+	invitation_token text,
 	logo blob,
 	public boolean,
 
