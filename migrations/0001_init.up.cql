@@ -79,6 +79,7 @@ CREATE TABLE groups (
 
 	name text,
 	descr text,
+	invitation_token text,
 	logo blob,
 	public boolean,
 
@@ -203,6 +204,7 @@ CREATE TABLE grep_codes (
 	id text PRIMARY KEY,
 	title map<text, text>,
 	code text,
+	type text,
 	last_changed timestamp
 );
 CREATE INDEX grep_codes_code_idx ON grep_codes(code);
@@ -244,5 +246,5 @@ CREATE TABLE roles(
 CREATE INDEX roles_orgid_idx ON roles(orgid);
 
 CREATE TABLE remote_apigatekeepers (
-    fqdn text PRIMARY KEY
+    dn text PRIMARY KEY
 );
