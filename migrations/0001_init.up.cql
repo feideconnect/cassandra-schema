@@ -246,5 +246,5 @@ CREATE TABLE roles(
 CREATE INDEX roles_orgid_idx ON roles(orgid);
 
 CREATE TABLE remote_apigatekeepers (
-    fqdn text PRIMARY KEY
+    dn text PRIMARY KEY
 );
