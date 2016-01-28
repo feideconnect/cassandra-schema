@@ -204,6 +204,7 @@ CREATE TABLE grep_codes (
 	id text PRIMARY KEY,
 	title map<text, text>,
 	code text,
+	type text,
 	last_changed timestamp
 );
 CREATE INDEX grep_codes_code_idx ON grep_codes(code);
