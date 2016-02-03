@@ -15,3 +15,7 @@ Add a new migration:
 ```
 CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./migrate create update_for_new_feature
 ```
+
+## Docker image:
+
+The docker image can also be pulled from `uninett-docker-uninett.bintray.io/feideconnect/dataportenschemas`
