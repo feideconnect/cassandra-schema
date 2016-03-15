@@ -3,6 +3,6 @@ CREATE TABLE logins_stats (
     date text,
     timeslot timestamp,
     authsource text,
-    value counter,
+    login_count counter,
     PRIMARY KEY ((clientid, date), authsource, timeslot)
 );
