@@ -1,4 +1,10 @@
 #! /bin/sh
 IMAGE=dataportenschemas
+if test "${SCHEMA}" != ""
+then
+    export SUFFIX="-${SCHEMA}"
+else
+    export SUFFIX=""
+fi
 docker build -t $IMAGE .
-docker run -u $(id -u):$(id -g) -v $(pwd)/migrations:/migrations --env CASSANDRA_NODE --env CASSANDRA_KEYSPACE $IMAGE $@
+docker run -u $(id -u):$(id -g) -v $(pwd)/migrations${SUFFIX}:/migrations${SUFFIX} --env SUFFIX --env CASSANDRA_NODE --env CASSANDRA_KEYSPACE $IMAGE $@

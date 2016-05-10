@@ -5,5 +5,7 @@ ADD InitKeyspace.go /InitKeyspace.go
 RUN go build /InitKeyspace.go
 ADD wait-for-it.sh /
 ADD migrations /migrations
+ADD migrations-simplesamlphp-session /
+ADD migrations-peoplesearch-cache /
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]

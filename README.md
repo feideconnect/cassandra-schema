@@ -19,3 +19,15 @@ CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./
 ## Docker image:
 
 The docker image can also be pulled from `uninett-docker-uninett.bintray.io/feideconnect/dataportenschemas`
+
+## To work with simplesamlphp session keyspace:
+
+```
+SCHEMA=simplesamlphp-session CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./migrate up
+```
+
+## To work with peoplesearch cache keyspace:
+
+```
+SCHEMA=peoplesearch-cache CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./migrate up
+```
