@@ -7,4 +7,8 @@ else
 fi
 /wait-for-it.sh -h ${CASSANDRA_NODE} -p 9042
 /go/InitKeyspace
-exec /go/bin/migrate -url cassandra://${CASSANDRA_NODE}:9042/${CASSANDRA_KEYSPACE} -path /migrations$SUFFIX $@
+/go/bin/migrate -url cassandra://${CASSANDRA_NODE}:9042/${CASSANDRA_KEYSPACE} -path /migrations$SUFFIX $@
+if test "${TESTDATA}" != ""
+then
+    /go/AddTestdata
+fi
