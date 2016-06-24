@@ -5,7 +5,7 @@ then
 else
     SUFFIX=""
 fi
-/wait-for-it.sh -h ${CASSANDRA_NODE} -p 9042
+/wait-for-it.sh -h ${CASSANDRA_NODE} -p 9042 -t 60
 /go/InitKeyspace
 /go/bin/migrate -url cassandra://${CASSANDRA_NODE}:9042/${CASSANDRA_KEYSPACE} -path /migrations$SUFFIX $@
 if test "${TESTDATA}" != ""
