@@ -1,4 +1,16 @@
 #! /bin/sh
+if test "${PROD}" != ""
+then
+    if ! vault read -field policies auth/token/lookup-self
+    then
+        echo "Log in to vault first"
+        exit 1
+    fi
+    vault_key=secret/dataporten/cassandra/superuser
+    export USERNAME=$(vault read -field username $vault_key)
+    export PASSWORD=$(vault read -field password $vault_key)
+    export CAPATH=/cassandraca.pem
+fi
 IMAGE=dataportenschemas
 if test "${SCHEMA}" != ""
 then
@@ -7,4 +19,4 @@ else
     export SUFFIX=""
 fi
 docker build -t $IMAGE .
-docker run -u $(id -u):$(id -g) -v $(pwd)/migrations${SUFFIX}:/migrations${SUFFIX} --env SCHEMA --env CASSANDRA_NODE --env CASSANDRA_KEYSPACE $IMAGE $@
+docker run -u $(id -u):$(id -g) -v $(pwd)/migrations${SUFFIX}:/migrations${SUFFIX} --env SCHEMA --env CASSANDRA_NODE --env CASSANDRA_KEYSPACE --env USERNAME --env PASSWORD --env CAPATH $IMAGE $@
