@@ -1,0 +1,23 @@
+{
+    "id": "clientadmin",
+    "allow_unauthenticated": true,
+    "created": "2016-10-03 08:17:56.462Z",
+    "descr": "",
+    "docurl": null,
+    "endpoints": ["http://clientadm:6543"],
+    "expose": null,
+    "httpscertpinned": null,
+    "logo": null,
+    "name": "Dataporten client administration",
+    "organization": "fc:org:uninett.no",
+    "owner": "822d3624-30e0-4c73-9c2a-386bd4c2c310",
+    "privacypolicyurl": null,
+    "requireuser": true,
+    "scopedef": "{\"policy\": {\"auto\": false}, \"title\": \"Basic access\"}",
+    "scopes": ["groups", "groups-orgadmin", "userid"],
+    "scopes_requested": ["groups", "groups-orgadmin", "userid"],
+    "status": null,
+    "systemdescr": null,
+    "trust": "{\"type\": \"basic\", \"username\": \"dataporten\", \"password\": \"0234bfb0-3743-492b-bd91-e6918e917569\"}",
+    "updated": "2016-10-03 08:19:35.246Z"
+}

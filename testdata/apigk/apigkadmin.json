@@ -1,0 +1,33 @@
+{
+  "updated": "2016-10-03 13:08:38.824Z",
+  "trust": "{\"type\": \"basic\", \"username\": \"dataporten\", \"password\": \"a2c966d3-daef-4349-a507-846418663fb0\"}",
+  "systemdescr": null,
+  "status": null,
+  "scopes_requested": [
+    "groups",
+    "groups-orgadmin",
+    "userid"
+  ],
+  "scopes": [
+    "groups",
+    "groups-orgadmin",
+    "userid"
+  ],
+  "scopedef": "{\"policy\": {\"auto\": false}, \"title\": \"Basic access\"}",
+  "requireuser": true,
+  "privacypolicyurl": null,
+  "owner": "822d3624-30e0-4c73-9c2a-386bd4c2c310",
+  "organization": "fc:org:uninett.no",
+  "name": "API Gatekeeper administration",
+  "logo": null,
+  "httpscertpinned": null,
+  "expose": null,
+  "endpoints": [
+    "http:\/\/apigkadmin:6543"
+  ],
+  "docurl": null,
+  "descr": "",
+  "created": "2016-10-03 13:05:20.133Z",
+  "allow_unauthenticated": true,
+  "id": "apigkadmin"
+}
