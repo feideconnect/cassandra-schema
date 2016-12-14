@@ -23,11 +23,11 @@ The docker image can also be pulled from `uninett-docker-uninett.bintray.io/feid
 ## To work with simplesamlphp session keyspace:
 
 ```
-SCHEMA=simplesamlphp-session CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./migrate up
+SCHEMA=simplesamlphp-session CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=simplesamlsessions ./migrate up
 ```
 
 ## To work with peoplesearch cache keyspace:
 
 ```
-SCHEMA=peoplesearch-cache CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dataporten ./migrate up
+SCHEMA=peoplesearch-cache CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dp_ps_cache ./migrate up
 ```
