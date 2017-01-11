@@ -13,5 +13,6 @@ ADD wait-for-it.sh /
 ADD migrations /migrations
 ADD migrations-simplesamlphp-session /migrations-simplesamlphp-session
 ADD migrations-peoplesearch-cache /migrations-peoplesearch-cache
+ADD migrations-metadata /migrations-metadata
 ADD docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]

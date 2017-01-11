@@ -31,3 +31,9 @@ SCHEMA=simplesamlphp-session CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CAS
 ```
 SCHEMA=peoplesearch-cache CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=dp_ps_cache ./migrate up
 ```
+
+## To work with metadata keyspace:
+
+```
+SCHEMA=metadata CASSANDRA_NODE=vltrd006.cassandra.db.uninett.no CASSANDRA_KEYSPACE=metadata ./migrate up
+```
