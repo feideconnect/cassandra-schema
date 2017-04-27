@@ -1,6 +1,8 @@
 FROM golang
 RUN curl -sS https://vault.uninett.no:8200/v1/dpcassandra/ca/pem > /cassandraca.pem
-RUN go get -d github.com/mattes/migrate
+RUN git clone -b v1 https://github.com/mattes/migrate.git /go/src/github.com/mattes/migrate/
+RUN go get -u -v github.com/mattes/migrate && \
+    go build -tags 'casssandra' -o /usr/local/bin/migrate github.com/mattes/migrate
 RUN rm -rf /go/src/github.com/mattes/migrate && git clone https://github.com/feideconnect/migrate.git /go/src/github.com/mattes/migrate
 RUN go install -v github.com/mattes/migrate
 RUN go get github.com/gocql/gocql
