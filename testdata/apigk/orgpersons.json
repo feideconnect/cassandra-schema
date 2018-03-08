@@ -1,0 +1,35 @@
+{
+  "id": "orgpersons",
+  "admin_contact": null,
+  "admins": null,
+  "allow_unauthenticated": true,
+  "created": "2018-03-08 08:34:16.869Z",
+  "descr": null,
+  "docurl": null,
+  "endpoints": [
+    "https://orgpersons:6543"
+  ],
+  "expose": null,
+  "httpscertpinned": null,
+  "logo": null,
+  "name": "Organization person search",
+  "organization": "fc:org:uninett.no",
+  "owner": "fab09476-234d-4bdd-8a3e-5b5d4e33b098",
+  "privacypolicyurl": null,
+  "requireuser": true,
+  "scopedef": "{\"title\": \"Basic access\", \"policy\": {\"auto\": false}}",
+  "scopes": [
+    "groups",
+    "groups-orgadmin",
+    "userid"
+  ],
+  "scopes_requested": [
+    "groups",
+    "groups-orgadmin",
+    "userid"
+  ],
+  "status": null,
+  "systemdescr": null,
+  "trust": "{\"username\": \"dataporten\", \"password\": \"fdbc784f-88a2-42c9-a02f-da5ba382393f\", \"type\": \"basic\"}",
+  "updated": "2018-03-08 08:34:16.869Z"
+}
