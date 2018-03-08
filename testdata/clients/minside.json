@@ -20,8 +20,10 @@
     "https://minside.127.0.0.1.xip.io/"
   ],
   "scopes": [
+    "adhocgroupadmin",
     "authzinfo",
     "email",
+    "groups",
     "openid",
     "profile",
     "userid-feide",
@@ -29,8 +31,10 @@
     "userid-social"
   ],
   "scopes_requested": [
+    "adhocgroupadmin",
     "authzinfo",
     "email",
+    "groups",
     "openid",
     "profile",
     "userid-feide",
